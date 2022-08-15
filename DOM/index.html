@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Dom</h1>
+    </header>
+    <main>
+        <h1>My Awesom</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Jalali Set</li>
+            <li>Jalali Set</li>
+        </ul>
+
+        <section>
+            <h1 class="fruit-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banna</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1>Places I like to visit</h1>
+            <ul>
+                <li class="im-places">Chittagonr</li>
+                <li class="im-places">Dhaka</li>
+                <li class="im-places">Sylate</li>
+                <li class="im-places">Rajshahi</li>
+            </ul>
+        </section>
+    </main>
+    <script src="dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        for(const li of liCollection){
+            //console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for(const h1 of allHeading){
+            //console.log(h1);
+        }
+
+        const places = document.getElementsByClassName('im-places');
+        for (const place of places){
+            console.log(place.innerText)
+        }
+
+        const someLi = document.querySelectorAll('(.im-places');
+        for (const li of someLi){
+            console.log(li);
+        }
+    </script>
+
+</body>
+</html>
